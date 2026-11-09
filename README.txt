@@ -1,34 +1,50 @@
-VECTOR SIAP PAKAI
-Paket website katalog statis untuk GitHub Pages.
+VECTOR SIAP PAKAI — PAKET WEBSITE FINAL
 
-CARA MEMASANG
-1. Buat repository GitHub baru, misalnya: vector-siap-pakai
-2. Upload seluruh isi folder ini ke root repository (index.html harus di root).
-3. Buka Settings > Pages.
-4. Pada Build and deployment pilih Deploy from a branch.
-5. Pilih branch main dan folder /(root), lalu Save.
-6. Tunggu proses publikasi. Alamat umumnya: https://USERNAME.github.io/NAMA-REPOSITORY/
+ISI PAKET
+- index.html: halaman website utama.
+- assets/images/: delapan folder kategori untuk gambar produk.
 
-PENGATURAN WAJIB
-1. Buka app.js.
-2. Ganti WHATSAPP_NUMBER = "628XXXXXXXXXX" dengan nomor WA bisnis, tanpa tanda +, spasi, atau angka 0 di depan.
-3. Buka index.html dan ganti USERNAME serta REPOSITORY pada URL schema JSON-LD.
-4. Ganti USERNAME dan REPOSITORY di robots.txt dan sitemap.xml.
+IDENTITAS
+- Nama merek: VECTOR SIAP PAKAI
+- WhatsApp: 0856-9252-0888
+- URL GitHub Pages yang dituju: https://sug453193-ux.github.io/vector-siap-pakai/
 
-MENAMBAH PRODUK
-1. Siapkan gambar preview, disarankan WebP/JPG/PNG.
-2. Letakkan di assets/images/, misalnya SW-002.webp.
-3. Edit products.js dan tambahkan objek produk baru ke array PRODUCTS.
-4. Gunakan kode unik berurutan, misalnya SW-002, IS-002, CNC-002. Jangan pernah menggunakan ulang kode produk yang sudah terpakai.
-5. Isi image dengan path preview, contoh "assets/images/SW-002.webp".
-6. Isi nama, kategori, format, harga/teks harga, dan deskripsi yang akurat.
-7. Pastikan Anda memiliki hak untuk menjual atau melisensikan desain tersebut.
+SEO VECTOR DAN VEKTOR
+Website menggunakan kedua variasi penulisan secara alami:
+- vector siap pakai
+- vektor siap pakai
+- download vector / download vektor
+- desain vector / desain vektor
+- gambar vector / gambar vektor
+Kata VECTOR tetap menjadi identitas merek. VEKTOR digunakan dalam judul, deskripsi, artikel, dan konten relevan untuk membantu menjangkau variasi pencarian.
 
-PENTING
-- Contoh produk dalam products.js hanya placeholder, bukan produk sungguhan.
-- Jangan unggah master file CDR/SVG/DXF yang dibeli pelanggan ke folder publik.
-- GitHub Pages bersifat statis. Pemesanan awal dilakukan manual melalui WhatsApp; konfirmasi pembayaran dan pengiriman file dilakukan manual.
-- Jangan menuliskan klaim "siap produksi CNC/laser" sebelum file diuji pada mesin, tool, bahan, dan parameter yang relevan.
-- Preview dapat dibuka dalam tampilan besar. Pada Android, gunakan pinch-to-zoom. Gambar menggunakan object-fit: contain agar tidak sengaja dipotong.
-- Ganti URL contoh USERNAME/REPOSITORY sebelum website dipublikasikan.
-- Tambahkan kebijakan privasi, syarat penggunaan, dan detail lisensi final sebelum mulai menerima transaksi.
+FOLDER KATEGORI
+- islamic-ornament
+- swirl-scroll
+- floral-botanical
+- geometric-pattern
+- cnc-laser-panel
+- frames-borders
+- abstract-ornament
+- vintage-classic
+
+PENAMAAN FILE GAMBAR
+Gunakan kode kategori diikuti nomor, misalnya:
+- IS-001.png untuk islamic-ornament
+- SW-001.png untuk swirl-scroll
+- FL-001.png untuk floral-botanical
+- GE-001.png untuk geometric-pattern
+- CNC-001.png untuk cnc-laser-panel
+- FB-001.png untuk frames-borders
+- AB-001.png untuk abstract-ornament
+- VT-001.png untuk vintage-classic
+
+Anda dapat menambahkan deskripsi setelah nomor, misalnya IS-001-kaligrafi.png.
+Masukkan gambar ke folder kategori yang sesuai. Website membaca gambar dari repositori GitHub publik.
+
+CATATAN PENTING
+- Pastikan repositori GitHub bersifat Public agar katalog dapat membaca gambar melalui GitHub Contents API.
+- Letakkan index.html langsung di root repositori, bersama folder assets.
+- Setelah upload dan commit, tunggu GitHub Pages selesai menerbitkan perubahan.
+- Kesesuaian file untuk CNC/laser tetap perlu diperiksa menurut software, mesin, material, ukuran, dan kebutuhan produksi.
+- SEO teknis dan konten sudah disiapkan, tetapi peringkat Google tidak dapat dijamin dan tetap bergantung pada indeksasi, kualitas konten, reputasi situs, serta persaingan kata kunci.

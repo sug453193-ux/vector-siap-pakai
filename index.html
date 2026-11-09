@@ -1,128 +1,559 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vector Siap Pakai  menyediakan koleksi desain vector ornament, swirl, floral, geometric, dan file untuk kebutuhan desain serta produksi.">
-  <meta name="keywords" content="vector siap pakai, jual vector, file SVG, desain ornament, swirl pattern, Islamic ornament, CNC laser cutting">
-  <meta name="theme-color" content="#171717">
-  <meta property="og:title" content="Vector Siap Pakai — ">
-  <meta property="og:description" content="Koleksi desain vector siap digunakan untuk kebutuhan desain dan produksi.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="VECTOR SIAP PAKAI menyediakan download desain vector (vektor) siap pakai untuk ornamen Islami, CNC, laser cutting, dekorasi, percetakan, dan kebutuhan desain digital.">
+  <meta name="keywords" content="vector siap pakai, vektor siap pakai, download vector, download vektor, desain vector, desain vektor, gambar vector, gambar vektor, file vector CNC, file vektor CNC, laser cutting, ornamen islami, CorelDRAW, CDR, SVG, EPS, AI, DXF">
+  <meta name="author" content="VECTOR SIAP PAKAI">
   <meta property="og:type" content="website">
-  <title>Vector Siap Pakai — </title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="VECTOR SIAP PAKAI | Download Vector dan Vektor Siap Pakai">
+  <meta property="og:description" content="Temukan koleksi desain vector (vektor) siap pakai untuk ornamen, CNC, laser cutting, dekorasi, dan kebutuhan kreatif.">
+  <meta property="og:url" content="https://sug453193-ux.github.io/vector-siap-pakai/">
+  <title>VECTOR SIAP PAKAI | Download Vector & Vektor Siap Pakai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#08111f; --bg2:#0d1a2c; --panel:#101f33; --line:rgba(255,255,255,.1);
+      --text:#f7f8fc; --muted:#aab7c9; --gold:#d7b46a; --gold2:#f0d89c;
+      --cyan:#8ddcf1; --green:#20c875; --max:1200px; --radius:22px;
+      --shadow:0 24px 70px rgba(0,0,0,.32);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    [hidden]{display:none!important}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:"DM Sans",sans-serif;color:var(--text);background:
+      radial-gradient(circle at 12% 8%,rgba(215,180,106,.10),transparent 27%),
+      radial-gradient(circle at 88% 28%,rgba(77,153,195,.10),transparent 30%),var(--bg);
+      line-height:1.65;overflow-x:hidden}
+    body.locked{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topbar{position:fixed;z-index:1000;inset:0 0 auto;background:rgba(8,17,31,.72);
+      border-bottom:1px solid transparent;backdrop-filter:blur(16px);transition:.3s}
+    .topbar.scrolled{background:rgba(8,17,31,.94);border-color:var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;font:800 17px Manrope,sans-serif;letter-spacing:-.5px}
+    .brand-mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+      border:1px solid rgba(215,180,106,.55);background:linear-gradient(145deg,rgba(215,180,106,.2),rgba(255,255,255,.025));
+      color:var(--gold2);font-size:21px}
+    .brand-mark:before{content:"✦"}
+    .nav-links{display:flex;align-items:center;gap:27px;color:#d5dce7;font-size:13px;font-weight:700}
+    .nav-links a:hover{color:var(--gold2)}
+    .nav-cta{padding:11px 17px;border-radius:999px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#172033!important}
+    .menu-btn{display:none;width:43px;height:43px;border:1px solid var(--line);border-radius:12px;background:#ffffff0b;color:white;font-size:21px}
+    .hero{position:relative;min-height:730px;padding:150px 0 90px;display:flex;align-items:center;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(90deg,rgba(8,17,31,.99),rgba(8,17,31,.91) 46%,rgba(8,17,31,.55)),
+      repeating-linear-gradient(0deg,transparent 0 59px,rgba(255,255,255,.025) 60px),
+      repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.025) 60px)}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;right:-180px;top:12%;border-radius:50%;
+      background:rgba(215,180,106,.12);filter:blur(90px);pointer-events:none}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:48px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(215,180,106,.3);
+      border-radius:999px;background:rgba(215,180,106,.08);color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
+    h1,h2,h3{font-family:Manrope,sans-serif}
+    h1{font-size:clamp(42px,5.4vw,70px);line-height:1.04;letter-spacing:-3px;margin:22px 0}
+    h1 span{color:var(--gold2)}
+    .hero-copy{max-width:610px;color:#c1cbd8;font-size:17px;line-height:1.85}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{min-height:51px;display:inline-flex;align-items:center;justify-content:center;padding:0 21px;border-radius:13px;font-size:13px;font-weight:800;transition:.25s}
+    .btn-primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#172033;box-shadow:0 12px 32px rgba(215,180,106,.18)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff}
+    .btn:hover{transform:translateY(-3px)}
+    .hero-note{margin-top:28px;color:#8f9eb2;font-size:12px}
+    .hero-art{position:relative;min-height:440px;display:grid;place-items:center}
+    .art-frame{position:absolute;inset:22px 12px 22px 22px;border:1px solid rgba(215,180,106,.3);border-radius:30px;transform:rotate(2deg)}
+    .art-main{position:relative;width:min(100%,500px);height:390px;border:1px solid rgba(255,255,255,.16);border-radius:26px;
+      overflow:hidden;background:linear-gradient(145deg,#15263b,#0b1422);box-shadow:var(--shadow);display:grid;place-items:center}
+    .art-main img{width:100%;height:100%;object-fit:contain;padding:20px;position:absolute;inset:0}
+    .art-placeholder{font-size:88px;color:rgba(215,180,106,.45);text-align:center}
+    .art-caption{position:absolute;left:18px;right:18px;bottom:18px;padding:13px 16px;border:1px solid rgba(255,255,255,.13);
+      border-radius:15px;background:rgba(5,12,22,.78);backdrop-filter:blur(14px);font-size:12px;color:#e8edf5}
+    .art-caption strong{display:block;color:var(--gold2);font:700 14px Manrope,sans-serif}
+    section{padding:92px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+    .section-kicker{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:9px}
+    h2{font-size:clamp(30px,4vw,46px);line-height:1.13;letter-spacing:-1.7px}
+    .section-desc{max-width:520px;color:var(--muted);font-size:14px;line-height:1.8}
+    .categories{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)}
+    .category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .category-card{min-height:160px;padding:22px;border:1px solid var(--line);border-radius:19px;
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));transition:.25s}
+    .category-card:hover{transform:translateY(-5px);border-color:rgba(215,180,106,.4);background:rgba(215,180,106,.06)}
+    .category-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(215,180,106,.1);
+      color:var(--gold2);font-size:20px;margin-bottom:15px}
+    .category-card strong{display:block;font:700 15px Manrope,sans-serif;margin-bottom:5px}
+    .category-card span{font-size:12px;color:var(--muted)}
+    .catalog{padding-top:75px}
+    .filter-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+    .filter{border:1px solid var(--line);border-radius:999px;padding:9px 15px;background:rgba(255,255,255,.035);color:#b8c4d4;
+      font-size:11px;font-weight:800;cursor:pointer;transition:.2s}
+    .filter.active,.filter:hover{border-color:rgba(215,180,106,.45);background:rgba(215,180,106,.12);color:var(--gold2)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .product-card{overflow:hidden;border:1px solid var(--line);border-radius:19px;background:rgba(255,255,255,.035);transition:.25s}
+    .product-card:hover{transform:translateY(-5px);border-color:rgba(215,180,106,.36);box-shadow:var(--shadow)}
+    .product-image{height:250px;background:#f3f2ee;display:grid;place-items:center;overflow:hidden;cursor:zoom-in}
+    .product-image img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .35s}
+    .product-card:hover .product-image img{transform:scale(1.035)}
+    .product-info{padding:17px}
+    .product-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
+    .product-code{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:.7px}
+    .product-category{color:#93a4b8;font-size:10px}
+    .product-info h3{font-size:15px;margin-bottom:13px}
+    .product-actions{display:flex;gap:8px}
+    .small-btn{flex:1;min-height:38px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.055);color:white;
+      font-size:11px;font-weight:800;cursor:pointer}
+    .small-btn.gold{background:var(--gold);border-color:var(--gold);color:#172033}
+    .empty{grid-column:1/-1;padding:45px 20px;text-align:center;border:1px dashed var(--line);border-radius:18px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about-copy p{margin-top:17px;color:var(--muted);font-size:15px;line-height:1.85}
+    .about-panel{min-height:330px;border:1px solid rgba(215,180,106,.22);border-radius:25px;padding:28px;
+      background:radial-gradient(circle at 80% 20%,rgba(215,180,106,.15),transparent 35%),linear-gradient(145deg,#14243a,#0b1422);
+      display:flex;flex-direction:column;justify-content:end}
+    .about-panel .symbol{font-size:82px;color:var(--gold);line-height:1;margin-bottom:18px}
+    .about-panel strong{font:800 23px Manrope,sans-serif}
+    .about-panel span{color:var(--muted);font-size:13px;margin-top:6px}
+    .formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .formats span{padding:8px 12px;border:1px solid rgba(215,180,106,.22);border-radius:9px;color:var(--gold2);font-size:11px;font-weight:800}
+    .cta{padding-top:20px}
+    .cta-box{padding:55px;border:1px solid rgba(215,180,106,.24);border-radius:27px;
+      background:radial-gradient(circle at 90% 5%,rgba(215,180,106,.16),transparent 35%),linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+    .cta-box p{max-width:660px;color:var(--muted);margin:15px 0 25px}
+    footer{padding:35px 0 25px;border-top:1px solid var(--line);margin-top:45px}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .footer-copy{color:#8797aa;font-size:12px;margin-top:8px}
+    .footer-contact{color:var(--gold2);font-size:13px;font-weight:800}
+    .copyright{text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:25px;padding-top:20px;color:#718197;font-size:11px}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:900;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+      background:var(--green);color:white;font-size:25px;box-shadow:0 12px 35px rgba(0,0,0,.35)}
+    /* Zoom viewer: gambar tetap utuh, bisa pinch dan digeser di layar sentuh */
+    .viewer{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.96);
+      padding:64px 16px 58px;touch-action:none;overflow:hidden}
+    .viewer.open{display:flex}
+    .viewer img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-drag:none;
+      transform:translate3d(0,0,0) scale(1);transform-origin:center center;will-change:transform;touch-action:none;border-radius:5px}
+    .viewer-close{position:absolute;right:16px;top:14px;z-index:2;width:44px;height:44px;border:1px solid #ffffff35;border-radius:50%;
+      background:#ffffff16;color:#fff;font-size:25px;cursor:pointer}
+    .viewer-hint{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);white-space:nowrap;color:#d1d8e2;
+      font-size:11px;background:#0008;border:1px solid #ffffff20;border-radius:999px;padding:7px 12px}
+    @media(max-width:900px){
+      .nav-links{position:absolute;display:none;top:78px;left:18px;right:18px;padding:17px;border:1px solid var(--line);border-radius:18px;
+        background:rgba(8,17,31,.98);flex-direction:column;align-items:stretch;gap:0}
+      .nav-links.open{display:flex}.nav-links a{padding:12px}.menu-btn{display:block}
+      .hero-grid{grid-template-columns:1fr;gap:25px}.hero{min-height:auto;padding:135px 0 70px}
+      .hero-art{min-height:340px}.art-main{height:320px;max-width:520px}
+      .category-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .container{width:calc(100% - 28px)}.nav{height:70px}.nav-links{top:70px}.brand{font-size:14px}.brand-mark{width:38px;height:38px}
+      .hero{padding:115px 0 55px}.hero-grid{gap:15px}h1{font-size:clamp(39px,11vw,54px);letter-spacing:-2px}
+      .hero-copy{font-size:15px}.hero-actions{flex-direction:column}.btn{width:100%}
+      .hero-art{min-height:285px}.art-main{height:270px}.art-frame{inset:14px 4px 14px 10px}
+      section{padding:70px 0}.section-head{display:block}.section-desc{margin-top:13px}
+      .category-grid{gap:10px}.category-card{min-height:145px;padding:16px}.category-card strong{font-size:13px}
+      .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .product-image{height:170px}.product-info{padding:12px}.product-info h3{font-size:12px;min-height:38px}
+      .product-meta{display:block}.product-category{display:block;margin-top:3px}.product-actions{flex-direction:column}
+      .small-btn{min-height:35px}.cta-box{padding:30px 22px}.footer-row{align-items:flex-start;flex-direction:column}
+      .wa-float{right:14px;bottom:14px;width:54px;height:54px}
+      .viewer{padding:58px 8px 50px}.viewer-hint{font-size:10px}
+    }
+
+    .wa-inline{display:inline-flex;vertical-align:middle;margin-right:7px;color:currentColor}
+    .wa-float svg{width:31px;height:31px}
+    .wa-float{color:#fff}
+    .education{background:linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
+    .article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .article-card{border:1px solid var(--line);border-radius:18px;padding:23px;background:rgba(255,255,255,.035)}
+    .article-tag{color:var(--gold2);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+    .article-card h3{font-size:17px;line-height:1.35;margin:12px 0}
+    .article-card p{font-size:13px;color:var(--muted);line-height:1.8}
+    .article-card details{margin-top:15px;border-top:1px solid var(--line);padding-top:13px}
+    .article-card summary{cursor:pointer;color:var(--gold2);font-size:12px;font-weight:800}
+    .article-card details p{margin-top:12px}
+    .faq-list{display:grid;gap:10px;max-width:900px}
+    .faq-list details{border:1px solid var(--line);border-radius:13px;padding:16px 18px;background:rgba(255,255,255,.025)}
+    .faq-list summary{cursor:pointer;font-weight:700;font-size:14px}
+    .faq-list p{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.8}
+    @media(max-width:900px){.article-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.article-grid{grid-template-columns:1fr}}
+
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Store",
-    "name":"Vector Siap Pakai — ",
-    "description":"Katalog desain vector ornament dan file siap pakai.",
-    "url":"https://USERNAME.github.io/REPOSITORY/"
+    "@graph":[
+      {"@type":"Organization","@id":"https://sug453193-ux.github.io/vector-siap-pakai/#organization","name":"VECTOR SIAP PAKAI","alternateName":["Vector Siap Pakai","Vektor Siap Pakai","Desain Vector dan Vektor"],"url":"https://sug453193-ux.github.io/vector-siap-pakai/","sameAs":["https://wa.me/6285692520888"]},
+      {"@type":"WebSite","@id":"https://sug453193-ux.github.io/vector-siap-pakai/#website","url":"https://sug453193-ux.github.io/vector-siap-pakai/","name":"VECTOR SIAP PAKAI - Download Vector dan Vektor Siap Pakai","alternateName":["Koleksi Desain Vector","Koleksi Desain Vektor"],"publisher":{"@id":"https://sug453193-ux.github.io/vector-siap-pakai/#organization"},"inLanguage":"id-ID"},
+      {"@type":"CollectionPage","name":"Koleksi Desain Vektor Siap Pakai","url":"https://sug453193-ux.github.io/vector-siap-pakai/#koleksi","isPartOf":{"@id":"https://sug453193-ux.github.io/vector-siap-pakai/#website"},"about":["desain vector","desain vektor","download vector siap pakai","download vektor siap pakai","ornamen Islami","panel CNC","laser cutting","motif dekoratif"]},
+      {"@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Apakah semua desain tersedia dalam format CDR atau DXF?","acceptedAnswer":{"@type":"Answer","text":"Format file dapat berbeda untuk setiap produk. Hubungi kami dengan kode produk untuk memastikan format yang tersedia."}},
+        {"@type":"Question","name":"Apakah gambar produk bisa diperbesar di HP Android?","acceptedAnswer":{"@type":"Answer","text":"Bisa. Ketuk gambar produk untuk membuka tampilan besar, lalu gunakan dua jari untuk memperbesar atau memperkecil dan geser untuk melihat bagian gambar lainnya."}},
+        {"@type":"Question","name":"Apakah desain bisa langsung digunakan untuk mesin CNC atau laser?","acceptedAnswer":{"@type":"Answer","text":"Kecocokan bergantung pada format, software, jenis mesin, material, ukuran, dan pengaturan produksi. Periksa file terlebih dahulu dan lakukan uji coba."}},
+        {"@type":"Question","name":"Bagaimana cara memesan produk?","acceptedAnswer":{"@type":"Answer","text":"Tekan tombol Pesan pada kartu produk. WhatsApp akan terbuka dengan kode dan nama produk yang disertakan pada pesan."}}
+      ]}
+    ]
   }
   </script>
+
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#beranda" aria-label="Vector Siap Pakai beranda">
-      <span class="brand-mark">VS</span>
-      <span><strong>VECTOR SIAP PAKAI</strong><small></small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#katalog">Katalog</a><a href="#kategori">Kategori</a><a href="#artikel">Artikel</a><a href="#lisensi">Lisensi</a>
-      <a class="nav-contact" id="headerWa" href="#">WhatsApp</a>
-    </nav>
+  <header class="topbar" id="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home"><span class="brand-mark"></span><span>VECTOR SIAP PAKAI</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Beranda</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#koleksi">Koleksi Vektor</a>
+        <a href="#edukasi">Artikel & Edukasi</a>
+        <a href="#tentang">Tentang</a>
+        <a class="nav-cta" href="https://wa.me/6285692520888" target="_blank" rel="noopener"><span class="wa-inline"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 2.67A13.23 13.23 0 0 0 4.7 22.73L3.2 29.3l6.72-1.45a13.25 13.25 0 1 0 6.12-25.18Zm0 24.1a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99.86.9-3.88-.26-.4a10.82 10.82 0 1 1 9.25 5.16Zm5.94-8.1c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.14-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.75s1.19 3.19 1.35 3.41c.17.22 2.34 3.57 5.67 5.01.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg></span> Pesan via WhatsApp</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="beranda">
-      <div class="hero-copy">
-        <p class="eyebrow">KOLEKSI VECTOR DIGITAL</p>
-        <h1>Desain menarik.<br><span>Siap dikembangkan.</span></h1>
-        <p class="hero-text">Temukan ornamen, pattern, dan desain vector untuk kebutuhan kreatif, percetakan, cutting sticker, hingga persiapan produksi CNC dan laser.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#katalog">Jelajahi Katalog</a><a class="btn btn-ghost" href="#cara-pesan">Cara Pemesanan</a></div>
-        <div class="hero-note">File digital • Pilihan format • Konsultasi melalui WhatsApp</div>
-      </div>
-      <div class="hero-art" aria-label="Ilustrasi ornamen dekoratif">
-        <div class="ornament ornament-one">✧</div><div class="ornament ornament-two">❋</div>
-        <div class="hero-stamp">VECTOR<br><b>COLLECTION</b><br>EST. 2026</div>
-      </div>
-    </section>
-
-    <section class="trust-strip">
-      <div><strong>01</strong><span>Kode produk unik</span></div><div><strong>02</strong><span>Preview katalog</span></div><div><strong>03</strong><span>Lisensi jelas</span></div><div><strong>04</strong><span>Pesan via WhatsApp</span></div>
-    </section>
-
-    <section class="section" id="kategori">
-      <div class="section-heading"><div><p class="eyebrow">JELAJAHI KOLEKSI</p><h2>Kategori desain</h2></div><p>Pilih gaya desain sesuai kebutuhan proyek Anda.</p></div>
-      <div class="category-grid" id="categoryGrid"></div>
-    </section>
-
-    <section class="section catalog-section" id="katalog">
-      <div class="section-heading"><div><p class="eyebrow">TEMUKAN DESAIN</p><h2>Katalog vector</h2></div><p>Gunakan pencarian atau filter untuk menemukan file yang tepat.</p></div>
-      <div class="catalog-tools">
-        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari nama atau kode produk..." aria-label="Cari produk"></label>
-        <select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select>
-        <select id="formatFilter" aria-label="Filter format"><option value="">Semua format</option><option>CDR</option><option>SVG</option><option>DXF</option><option>EPS</option><option>PDF</option></select>
-        <select id="sortFilter" aria-label="Urutkan produk"><option value="new">Terbaru</option><option value="name">Nama A–Z</option></select>
-      </div>
-      <p class="result-count" id="resultCount" aria-live="polite"></p>
-      <div class="product-grid" id="productGrid"></div>
-      <div class="empty-state" id="emptyState" hidden>Produk tidak ditemukan. Coba kata kunci atau filter lainnya.</div>
-    </section>
-
-    <section class="feature-band">
-      <div><p class="eyebrow">UNTUK BERBAGAI KEBUTUHAN</p><h2>Satu koleksi, banyak kemungkinan.</h2><p>Gunakan desain sebagai elemen dekoratif, materi cetak, cutting sticker, atau sebagai dasar pengembangan desain produksi. Selalu periksa spesifikasi file sebelum digunakan pada mesin.</p></div>
-      <div class="use-list"><span>✦ Cutting sticker</span><span>✦ Dekorasi kaca & dinding</span><span>✦ Percetakan & desain grafis</span><span>✦ CNC / laser — setelah uji teknis</span></div>
-    </section>
-
-    <section class="section" id="cara-pesan">
-      <div class="section-heading"><div><p class="eyebrow">MUDAH DAN LANGSUNG</p><h2>Cara pemesanan</h2></div></div>
-      <div class="steps">
-        <article><b>01</b><h3>Pilih desain</h3><p>Temukan produk melalui katalog dan catat kode produknya.</p></article>
-        <article><b>02</b><h3>Hubungi kami</h3><p>Klik tombol WhatsApp pada produk untuk menanyakan harga, format, dan lisensi.</p></article>
-        <article><b>03</b><h3>Konfirmasi</h3><p>Periksa detail file, ketentuan penggunaan, dan pembayaran sebelum transaksi.</p></article>
-        <article><b>04</b><h3>Terima file</h3><p>File final dikirim setelah pembayaran dikonfirmasi sesuai kesepakatan.</p></article>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Koleksi desain digital siap pakai</span>
+          <h1>Desain Vector & Vektor<br><span>Siap Pakai.</span></h1>
+          <p class="hero-copy">Temukan koleksi desain <strong>vector (vektor) siap pakai</strong> berupa ornamen Islami, kaligrafi, motif dekoratif, panel CNC, dan laser cutting untuk kebutuhan cutting sticker, dekorasi, percetakan, serta produksi kreatif.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#koleksi">Jelajahi Koleksi</a>
+            <a class="btn btn-secondary" href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20bertanya%20tentang%20koleksi%20vektor." target="_blank" rel="noopener"><span class="wa-inline"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 2.67A13.23 13.23 0 0 0 4.7 22.73L3.2 29.3l6.72-1.45a13.25 13.25 0 1 0 6.12-25.18Zm0 24.1a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99.86.9-3.88-.26-.4a10.82 10.82 0 1 1 9.25 5.16Zm5.94-8.1c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.14-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.75s1.19 3.19 1.35 3.41c.17.22 2.34 3.57 5.67 5.01.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg></span> Tanya via WhatsApp</a>
+          </div>
+          <p class="hero-note">File dan format mengikuti ketersediaan pada setiap produk. Hubungi kami untuk memastikan kebutuhan produksi Anda.</p>
+          <p class="hero-note">Vector dan vektor adalah dua penulisan yang sering digunakan untuk menyebut jenis grafis yang sama. Di sini Anda dapat menemukan koleksi desain vector / vektor siap pakai.</p>
+        </div>
+        <div class="hero-art">
+          <div class="art-frame"></div>
+          <div class="art-main">
+            <div class="art-placeholder" id="heroPlaceholder">✥</div>
+            <img id="heroImage" alt="Contoh desain vektor pilihan" hidden>
+            <div class="art-caption"><strong>Vector Collection</strong><span>Ornamen • Dekoratif • CNC • Laser</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section license-section" id="lisensi">
-      <div class="section-heading"><div><p class="eyebrow">PENGGUNAAN YANG JELAS</p><h2>Pilihan lisensi</h2></div><p>Ketentuan final untuk setiap produk harus dikonfirmasi sebelum pembelian.</p></div>
-      <div class="license-grid">
-        <article><h3>Personal</h3><p>Untuk penggunaan pribadi atau proyek non-komersial sesuai ketentuan produk.</p></article>
-        <article><h3>Komersial</h3><p>Untuk penggunaan dalam karya atau proyek komersial. Batas penggunaan mengikuti lisensi yang disepakati.</p></article>
-        <article><h3>Produksi</h3><p>Untuk kebutuhan produksi berulang atau jumlah tertentu, dengan batas unit dan penggunaan yang ditetapkan saat transaksi.</p></article>
+    <section class="categories" id="kategori">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Jelajahi kategori</div><h2>Temukan desain sesuai kebutuhan.</h2></div>
+          <p class="section-desc">Pilih kategori untuk melihat koleksi yang tersedia. Produk akan dimuat langsung dari folder aset di GitHub.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <a class="category-card" href="#koleksi" data-category="islamic-ornament"><div class="category-icon">✥</div><strong>Islamic Ornament</strong><span>Ornamen Islami & kaligrafi</span></a>
+          <a class="category-card" href="#koleksi" data-category="swirl-scroll"><div class="category-icon">❧</div><strong>Swirl & Scroll</strong><span>Motif lengkung dekoratif</span></a>
+          <a class="category-card" href="#koleksi" data-category="floral-botanical"><div class="category-icon">❀</div><strong>Floral & Botanical</strong><span>Bunga dan elemen tumbuhan</span></a>
+          <a class="category-card" href="#koleksi" data-category="geometric-pattern"><div class="category-icon">◇</div><strong>Geometric Pattern</strong><span>Motif geometri berulang</span></a>
+          <a class="category-card" href="#koleksi" data-category="cnc-laser-panel"><div class="category-icon">▦</div><strong>CNC & Laser Panel</strong><span>Panel dan pola produksi</span></a>
+          <a class="category-card" href="#koleksi" data-category="frames-borders"><div class="category-icon">▣</div><strong>Frames & Borders</strong><span>Bingkai dan ornamen tepi</span></a>
+          <a class="category-card" href="#koleksi" data-category="abstract-ornament"><div class="category-icon">✧</div><strong>Abstract Ornament</strong><span>Motif abstrak dekoratif</span></a>
+          <a class="category-card" href="#koleksi" data-category="vintage-classic"><div class="category-icon">❖</div><strong>Vintage & Classic</strong><span>Ornamen klasik dan vintage</span></a>
+        </div>
       </div>
-      <p class="license-warning">Tidak diperkenankan menjual ulang, membagikan, atau mengunggah ulang file sumber sebagai produk digital mandiri tanpa izin tertulis.</p>
     </section>
 
-    <section class="section article-section" id="artikel">
-      <div class="section-heading"><div><p class="eyebrow">WAWASAN & TUTORIAL</p><h2>Artikel edukasi</h2></div><p>Panduan singkat seputar vector, format file, dan persiapan desain.</p></div>
-      <div class="article-grid">
-        <a href="artikel/format-vector.html"><span>01 / PANDUAN</span><h3>Mengenal format CDR, SVG, DXF, EPS, dan PDF</h3><p>Pahami perbedaan format sebelum memilih file untuk proyek.</p><b>Baca artikel →</b></a>
-        <a href="artikel/persiapan-cutting.html"><span>02 / CUTTING</span><h3>Persiapan desain vector untuk cutting sticker</h3><p>Hal yang perlu diperiksa sebelum desain dikirim ke mesin cutting.</p><b>Baca artikel →</b></a>
-        <a href="artikel/bitmap-vector.html"><span>03 / DASAR VECTOR</span><h3>Perbedaan gambar bitmap dan vector</h3><p>Kenali karakter gambar raster dan vector dalam pekerjaan desain.</p><b>Baca artikel →</b></a>
+    <section class="catalog" id="koleksi">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Katalog produk</div><h2>Koleksi desain vector dan vektor pilihan.</h2></div>
+          <p class="section-desc">Tekan gambar untuk memperbesar. Pada Android, gunakan dua jari untuk zoom dan satu jari untuk menggeser gambar.</p>
+        </div>
+        <div class="filter-row" id="filters">
+          <button class="filter active" data-filter="all">Semua Kategori</button>
+          <button class="filter" data-filter="islamic-ornament">Islamic</button>
+          <button class="filter" data-filter="swirl-scroll">Swirl</button>
+          <button class="filter" data-filter="floral-botanical">Floral</button>
+          <button class="filter" data-filter="geometric-pattern">Geometric</button>
+          <button class="filter" data-filter="cnc-laser-panel">CNC & Laser</button>
+          <button class="filter" data-filter="frames-borders">Frames</button>
+          <button class="filter" data-filter="abstract-ornament">Abstract</button>
+          <button class="filter" data-filter="vintage-classic">Vintage</button>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <div class="empty">Sedang memuat koleksi desain vektor...</div>
+        </div>
       </div>
     </section>
 
-    <section class="contact-cta">
-      <p class="eyebrow">ADA PERTANYAAN?</p><h2>Butuh format atau desain tertentu?</h2><p>Hubungi kami untuk menanyakan ketersediaan file, lisensi, atau kebutuhan desain Anda.</p>
-      <a class="btn btn-light" id="bottomWa" href="#">Konsultasi via WhatsApp</a>
+
+    <section class="education" id="edukasi">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Artikel & edukasi</div><h2>Panduan vector (vektor) untuk desain dan produksi.</h2></div>
+          <p class="section-desc">Pelajari istilah vector atau vektor, format file desain, cara memilih file siap pakai, serta persiapan artwork untuk cutting, CNC, laser, percetakan, dan kebutuhan grafis.</p>
+        </div>
+        <div class="article-grid">
+          <article class="article-card">
+            <span class="article-tag">Panduan format</span>
+            <h3>Mengenal format file vector (vektor): CDR, SVG, EPS, AI, dan DXF</h3>
+            <p>File vector atau vektor menyimpan bentuk sebagai jalur dan kurva sehingga dapat diubah ukurannya. Setiap format memiliki kegunaan dan dukungan software yang berbeda.</p>
+            <details><summary>Baca edukasi</summary>
+              <p><strong>CDR</strong> adalah format dokumen CorelDRAW. <strong>SVG</strong> merupakan format vektor berbasis XML yang banyak didukung aplikasi desain dan web. <strong>EPS</strong> umum dipakai dalam alur kerja grafis dan percetakan. <strong>DXF</strong> sering digunakan untuk pertukaran gambar teknis dan alur kerja CAD/CAM. Sebelum membeli, pastikan format yang tersedia kompatibel dengan software dan mesin Anda.</p>
+            </details>
+          </article>
+          <article class="article-card">
+            <span class="article-tag">Persiapan produksi</span>
+            <h3>Tips menyiapkan desain vektor untuk CNC dan laser cutting</h3>
+            <p>Desain yang terlihat bagus di layar belum tentu langsung siap dipotong. Periksa jalur, ukuran, skala, dan detail kecil sebelum proses produksi.</p>
+            <details><summary>Baca edukasi</summary>
+              <p>Periksa apakah objek berupa kurva/jalur yang sesuai dengan software mesin. Pastikan skala dokumen benar, garis ganda atau jalur bertumpuk dibersihkan, dan detail terlalu kecil disesuaikan dengan material serta kemampuan mesin. Lakukan uji coba pada potongan kecil. Parameter daya, kecepatan, dan material harus mengikuti panduan mesin yang digunakan.</p>
+            </details>
+          </article>
+          <article class="article-card">
+            <span class="article-tag">Memilih desain</span>
+            <h3>Cara memilih ornamen Islami dan panel dekoratif yang tepat</h3>
+            <p>Pertimbangkan fungsi, ukuran bidang, tingkat kerumitan, dan bahan yang akan digunakan agar hasil akhir tetap proporsional.</p>
+            <details><summary>Baca edukasi</summary>
+              <p>Mulailah dari ukuran bidang pemasangan dan tentukan area kosong di sekeliling motif. Untuk panel, perhatikan sambungan dan bagian tipis yang berisiko rapuh. Untuk ornamen kaligrafi, periksa keterbacaan bentuk dan pastikan penggunaan teks sesuai kebutuhan. Minta pratinjau serta konfirmasi format sebelum produksi.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="section-kicker">Pertanyaan umum</div><h2>Informasi sebelum memesan.</h2></div>
+          <p class="section-desc">Beberapa hal yang perlu dipastikan sebelum menggunakan file desain untuk kebutuhan Anda.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>Apakah semua desain tersedia dalam format CDR atau DXF?</summary><p>Format file dapat berbeda untuk setiap produk. Silakan tanyakan kode produk melalui WhatsApp untuk memastikan format yang tersedia sebelum memesan.</p></details>
+          <details><summary>Apakah gambar produk bisa diperbesar di HP Android?</summary><p>Bisa. Ketuk gambar produk untuk membuka tampilan besar, lalu gunakan dua jari untuk memperbesar atau memperkecil dan geser untuk melihat bagian gambar lainnya.</p></details>
+          <details><summary>Apakah desain bisa langsung digunakan untuk mesin CNC atau laser?</summary><p>Kecocokan bergantung pada format, software, jenis mesin, material, ukuran, dan pengaturan produksi. Periksa file terlebih dahulu dan lakukan uji coba sesuai prosedur mesin Anda.</p></details>
+          <details><summary>Bagaimana cara memesan produk?</summary><p>Tekan tombol Pesan pada kartu produk. WhatsApp akan terbuka dengan kode dan nama produk yang sudah disertakan pada pesan.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <div class="section-kicker">Tentang kami</div>
+          <h2>Solusi praktis untuk kebutuhan desain dan produksi.</h2>
+          <p>VECTOR SIAP PAKAI menghadirkan koleksi desain vector (vektor) digital untuk membantu proses kreatif dan produksi menjadi lebih praktis. Jelajahi berbagai kategori ornamen dan pola yang dapat disesuaikan dengan kebutuhan Anda.</p>
+          <p>Setiap produk memiliki kode agar mudah ditanyakan. Sebelum memesan, silakan konfirmasi format file, detail produk, dan kecocokan dengan software atau mesin yang digunakan.</p>
+          <div class="formats"><span>CDR</span><span>SVG</span><span>EPS</span><span>DXF</span><span>AI</span><span>PDF</span></div>
+        </div>
+        <div class="about-panel">
+          <div class="symbol">✥</div>
+          <strong>VECTOR SIAP PAKAI</strong>
+          <span>Koleksi ornamen, pola dekoratif, dan aset produksi digital.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-kicker">Butuh bantuan memilih?</div>
+          <h2>Temukan desain yang tepat untuk proyek Anda.</h2>
+          <p>Kirim kode produk atau kategori yang Anda cari melalui WhatsApp. Kami akan membantu memberikan informasi produk dan format file yang tersedia.</p>
+          <a class="btn btn-primary" href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20konsultasi%20produk%20vektor." target="_blank" rel="noopener"><span class="wa-inline"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 2.67A13.23 13.23 0 0 0 4.7 22.73L3.2 29.3l6.72-1.45a13.25 13.25 0 1 0 6.12-25.18Zm0 24.1a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99.86.9-3.88-.26-.4a10.82 10.82 0 1 1 9.25 5.16Zm5.94-8.1c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.14-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.75s1.19 3.19 1.35 3.41c.17.22 2.34 3.57 5.67 5.01.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg></span> Hubungi WhatsApp</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="brand footer-brand"><span class="brand-mark">VS</span><span><strong>VECTOR SIAP PAKAI</strong><small></small></span></div><p>© <span id="year"></span> Vector Siap Pakai. Seluruh hak cipta dilindungi.</p><div><a href="#lisensi">Lisensi</a><a href="#cara-pesan">Cara pesan</a><a href="#beranda">Kembali ke atas ↑</a></div></footer>
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div><a class="brand" href="#home"><span class="brand-mark"></span><span>VECTOR SIAP PAKAI</span></a><div class="footer-copy">Koleksi desain vector (vektor) dan aset produksi digital.</div></div>
+        <a class="footer-contact" href="https://wa.me/6285692520888" target="_blank" rel="noopener">WhatsApp: 0856-9252-0888</a>
+      </div>
+      <div class="copyright">© <span id="year"></span> VECTOR SIAP PAKAI. All rights reserved.</div>
+    </div>
+  </footer>
 
-  <div class="modal" id="imageModal" aria-hidden="true">
-    <button class="modal-close" id="modalClose" aria-label="Tutup gambar">×</button>
-    <button class="zoom-control zoom-out" id="zoomOut" aria-label="Perkecil">−</button>
-    <button class="zoom-control zoom-in" id="zoomIn" aria-label="Perbesar">+</button>
-    <div class="modal-stage" id="modalStage"><img id="modalImage" alt="Preview produk diperbesar"></div>
-    <p class="modal-caption" id="modalCaption">Gunakan pinch pada layar sentuh atau tombol + dan − untuk memperbesar.</p>
+  <a class="wa-float" href="https://wa.me/6285692520888" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 2.67A13.23 13.23 0 0 0 4.7 22.73L3.2 29.3l6.72-1.45a13.25 13.25 0 1 0 6.12-25.18Zm0 24.1a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99.86.9-3.88-.26-.4a10.82 10.82 0 1 1 9.25 5.16Zm5.94-8.1c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.14-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.75s1.19 3.19 1.35 3.41c.17.22 2.34 3.57 5.67 5.01.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg></a>
+
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Perbesar gambar produk">
+    <button class="viewer-close" id="viewerClose" aria-label="Tutup gambar">×</button>
+    <img id="viewerImage" alt="Gambar produk diperbesar" draggable="false">
+    <div class="viewer-hint">Cubit untuk zoom • Geser untuk melihat detail • Ketuk × untuk menutup</div>
   </div>
 
-  <script src="products.js"></script>
-  <script src="app.js"></script>
+  <script>
+    const OWNER = "sug453193-ux";
+    const REPO = "vector-siap-pakai";
+    const ROOT = "assets/images";
+    const WA = "6285692520888";
+
+    const CATEGORIES = [
+      {id:"islamic-ornament",name:"Islamic Ornament",prefix:"IS"},
+      {id:"swirl-scroll",name:"Swirl & Scroll",prefix:"SW"},
+      {id:"floral-botanical",name:"Floral & Botanical",prefix:"FL"},
+      {id:"geometric-pattern",name:"Geometric Pattern",prefix:"GE"},
+      {id:"cnc-laser-panel",name:"CNC & Laser Panel",prefix:"CNC"},
+      {id:"frames-borders",name:"Frames & Borders",prefix:"FB"},
+      {id:"abstract-ornament",name:"Abstract Ornament",prefix:"AB"},
+      {id:"vintage-classic",name:"Vintage & Classic",prefix:"VT"}
+    ];
+
+    const productGrid = document.getElementById("productGrid");
+    const heroImage = document.getElementById("heroImage");
+    const heroPlaceholder = document.getElementById("heroPlaceholder");
+    let allProducts = [];
+    let currentFilter = "all";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const topbar = document.getElementById("topbar");
+    window.addEventListener("scroll", () => topbar.classList.toggle("scrolled", window.scrollY > 25), {passive:true});
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+
+    function labelFromFilename(filename) {
+      return filename.replace(/\.[^.]+$/,"").replace(/[_-]+/g," ").replace(/\s+/g," ").trim();
+    }
+    function productCode(filename, prefix) {
+      const match = filename.match(/(?:IS|SW|FL|GE|CNC|FB|AB|VT)[-_ ]?0*(\d+)/i);
+      if (match) return prefix + "-" + String(Number(match[1])).padStart(3,"0");
+      return prefix + "-" + filename.replace(/\.[^.]+$/,"").slice(-8).toUpperCase();
+    }
+    function isImage(name) { return /\.(png|jpe?g|webp|gif)$/i.test(name); }
+
+    async function loadCategory(category) {
+      const url = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${ROOT}/${category.id}`;
+      const response = await fetch(url, {headers:{Accept:"application/vnd.github+json"}});
+      if (!response.ok) throw new Error(`Folder ${category.id} tidak dapat dibaca`);
+      const files = await response.json();
+      return files.filter(file => file.type === "file" && isImage(file.name)).map(file => ({
+        name:file.name, url:file.download_url, category:category.id, categoryName:category.name,
+        code:productCode(file.name,category.prefix), label:labelFromFilename(file.name)
+      }));
+    }
+
+    function renderProducts() {
+      const items = currentFilter === "all" ? allProducts : allProducts.filter(p => p.category === currentFilter);
+      if (!items.length) {
+        productGrid.innerHTML = `<div class="empty">Belum ada gambar pada kategori ini. Pastikan file gambar sudah diunggah ke folder kategori yang sesuai.</div>`;
+        return;
+      }
+      productGrid.innerHTML = "";
+      items.forEach((p,index) => {
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.innerHTML = `
+          <div class="product-image" role="button" tabindex="0" aria-label="Perbesar ${p.label}">
+            <img src="${p.url}" alt="${p.categoryName} - ${p.label}" loading="${index < 6 ? "eager":"lazy"}">
+          </div>
+          <div class="product-info">
+            <div class="product-meta"><span class="product-code">${p.code}</span><span class="product-category">${p.categoryName}</span></div>
+            <h3>${p.label.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}</h3>
+            <div class="product-actions">
+              <button class="small-btn view-product" type="button">Perbesar</button>
+              <button class="small-btn gold order-product" type="button">Pesan</button>
+            </div>
+          </div>`;
+        const img = card.querySelector("img");
+        const open = () => openViewer(p.url);
+        card.querySelector(".product-image").addEventListener("click",open);
+        card.querySelector(".product-image").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+        card.querySelector(".view-product").addEventListener("click",open);
+        card.querySelector(".order-product").addEventListener("click",()=>{
+          const message = `Halo VECTOR SIAP PAKAI, saya tertarik dengan produk ${p.code} - ${p.label} (${p.categoryName}). Mohon informasi harga dan format file yang tersedia.`;
+          window.open(`https://wa.me/${WA}?text=${encodeURIComponent(message)}`,"_blank","noopener");
+        });
+        img.addEventListener("error",()=>{img.alt="Gambar belum dapat dimuat";});
+        productGrid.appendChild(card);
+      });
+    }
+
+    async function initCatalog() {
+      productGrid.innerHTML = `<div class="empty">Mengambil gambar dari folder kategori...</div>`;
+      const results = await Promise.allSettled(CATEGORIES.map(loadCategory));
+      allProducts = results.flatMap(r => r.status === "fulfilled" ? r.value : []);
+      allProducts.sort((a,b)=>a.code.localeCompare(b.code,undefined,{numeric:true}));
+      const first = allProducts[0];
+      if (first) {
+        heroImage.src = first.url;
+        heroImage.hidden = false;
+        heroPlaceholder.hidden = true;
+      }
+      renderProducts();
+    }
+
+    document.getElementById("filters").querySelectorAll(".filter").forEach(button=>{
+      button.addEventListener("click",()=>{
+        document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===button));
+        currentFilter = button.dataset.filter;
+        renderProducts();
+      });
+    });
+    document.querySelectorAll(".category-card").forEach(card=>{
+      card.addEventListener("click",()=>{
+        currentFilter = card.dataset.category;
+        document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.filter===currentFilter));
+        renderProducts();
+      });
+    });
+
+    /* Viewer dengan pinch-to-zoom dan drag pada Android/iOS */
+    const viewer = document.getElementById("viewer");
+    const viewerImage = document.getElementById("viewerImage");
+    const viewerClose = document.getElementById("viewerClose");
+    let pointers = new Map(), scale = 1, tx = 0, ty = 0, startDistance = 0, startScale = 1, startX = 0, startY = 0, baseX = 0, baseY = 0;
+    function clampPan(){
+      if(!viewerImage.naturalWidth || !viewerImage.naturalHeight){tx=0;ty=0;return;}
+      const fit=Math.min(viewer.clientWidth/viewerImage.naturalWidth,viewer.clientHeight/viewerImage.naturalHeight);
+      const fittedW=viewerImage.naturalWidth*fit;
+      const fittedH=viewerImage.naturalHeight*fit;
+      const maxX=Math.max(0,(fittedW*scale-viewer.clientWidth)/2);
+      const maxY=Math.max(0,(fittedH*scale-viewer.clientHeight)/2);
+      tx=Math.max(-maxX,Math.min(maxX,tx));
+      ty=Math.max(-maxY,Math.min(maxY,ty));
+    }
+    function applyTransform(){clampPan();viewerImage.style.transform=`translate3d(${tx}px,${ty}px,0) scale(${scale})`;}
+    function resetZoom(){scale=1;tx=0;ty=0;applyTransform();}
+    function openViewer(url){viewerImage.src=url;resetZoom();viewer.classList.add("open");document.body.classList.add("locked");}
+    function closeViewer(){viewer.classList.remove("open");document.body.classList.remove("locked");viewerImage.src="";pointers.clear();resetZoom();}
+    viewerClose.addEventListener("click",closeViewer);
+    viewer.addEventListener("click",e=>{if(e.target===viewer)closeViewer();});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape"&&viewer.classList.contains("open"))closeViewer();});
+    function distance(a,b){return Math.hypot(a.x-b.x,a.y-b.y);}
+    viewer.addEventListener("pointerdown",e=>{
+      if(e.target===viewerClose)return;
+      viewer.setPointerCapture(e.pointerId);
+      pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+      if(pointers.size===1){startX=e.clientX;startY=e.clientY;baseX=tx;baseY=ty;}
+      if(pointers.size===2){const pts=[...pointers.values()];startDistance=distance(pts[0],pts[1]);startScale=scale;}
+    });
+    viewer.addEventListener("pointermove",e=>{
+      if(!pointers.has(e.pointerId))return;
+      pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+      if(pointers.size===2){
+        const pts=[...pointers.values()];
+        if(startDistance>0){scale=Math.max(1,Math.min(5,startScale*distance(pts[0],pts[1])/startDistance));applyTransform();}
+      } else if(pointers.size===1 && scale>1){
+        tx=baseX+(e.clientX-startX);ty=baseY+(e.clientY-startY);applyTransform();
+      }
+    });
+    function releasePointer(e){pointers.delete(e.pointerId);if(pointers.size===1){const p=[...pointers.values()][0];startX=p.x;startY=p.y;baseX=tx;baseY=ty;}if(pointers.size===0)startDistance=0;}
+    viewer.addEventListener("pointerup",releasePointer);
+    viewer.addEventListener("pointercancel",releasePointer);
+    viewer.addEventListener("wheel",e=>{e.preventDefault();scale=Math.max(1,Math.min(5,scale+(e.deltaY<0?.25:-.25)));if(scale===1){tx=0;ty=0;}applyTransform();},{passive:false});
+
+    initCatalog().catch(error=>{
+      console.error(error);
+      productGrid.innerHTML=`<div class="empty">Katalog belum dapat dimuat. Periksa koneksi internet, nama repository, dan folder aset di GitHub.</div>`;
+    });
+  </script>
 </body>
 </html>
