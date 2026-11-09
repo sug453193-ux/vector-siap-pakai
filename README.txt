@@ -1,50 +1,33 @@
-VECTOR SIAP PAKAI — PAKET WEBSITE FINAL
+VECTOR SIAP PAKAI — PAKET REVISI WEBSITE
+========================================
 
-ISI PAKET
-- index.html: halaman website utama.
-- assets/images/: delapan folder kategori untuk gambar produk.
+STRUKTUR
+- index.html
+- assets/Images/hero/hero-workspace-islamic.webp
+- assets/Images/<nama-kategori>/
 
-IDENTITAS
-- Nama merek: VECTOR SIAP PAKAI
-- WhatsApp: 0856-9252-0888
-- URL GitHub Pages yang dituju: https://sug453193-ux.github.io/vector-siap-pakai/
+UPLOAD KE GITHUB
+1. Ekstrak ZIP ini.
+2. Di repositori vector-siap-pakai, unggah index.html dan folder assets ke ROOT repositori.
+3. Jika GitHub menyatakan file index.html sudah ada, pilih replace/commit perubahan pada file yang sama.
+4. Folder assets/images berisi 8 folder kategori. Jangan menghapus file gambar produk yang sudah Anda unggah sebelumnya.
+5. Setelah commit, buka https://sug453193-ux.github.io/vector-siap-pakai/
 
-SEO VECTOR DAN VEKTOR
-Website menggunakan kedua variasi penulisan secara alami:
-- vector siap pakai
-- vektor siap pakai
-- download vector / download vektor
-- desain vector / desain vektor
-- gambar vector / gambar vektor
-Kata VECTOR tetap menjadi identitas merek. VEKTOR digunakan dalam judul, deskripsi, artikel, dan konten relevan untuk membantu menjangkau variasi pencarian.
+PENAMAAN PRODUK
+Gunakan nama file berurutan per kategori:
+IS-001-nama-desain.png
+SW-001-nama-desain.svg
+FL-001-nama-desain.webp
+GE-001-nama-desain.png
+CNC-001-nama-panel.dxf (file preview yang ditampilkan harus PNG/JPG/WEBP/GIF)
+FB-001-nama-bingkai.png
+AB-001-nama-ornamen.png
+VT-001-nama-klasik.png
 
-FOLDER KATEGORI
-- islamic-ornament
-- swirl-scroll
-- floral-botanical
-- geometric-pattern
-- cnc-laser-panel
-- frames-borders
-- abstract-ornament
-- vintage-classic
-
-PENAMAAN FILE GAMBAR
-Gunakan kode kategori diikuti nomor, misalnya:
-- IS-001.png untuk islamic-ornament
-- SW-001.png untuk swirl-scroll
-- FL-001.png untuk floral-botanical
-- GE-001.png untuk geometric-pattern
-- CNC-001.png untuk cnc-laser-panel
-- FB-001.png untuk frames-borders
-- AB-001.png untuk abstract-ornament
-- VT-001.png untuk vintage-classic
-
-Anda dapat menambahkan deskripsi setelah nomor, misalnya IS-001-kaligrafi.png.
-Masukkan gambar ke folder kategori yang sesuai. Website membaca gambar dari repositori GitHub publik.
-
-CATATAN PENTING
-- Pastikan repositori GitHub bersifat Public agar katalog dapat membaca gambar melalui GitHub Contents API.
-- Letakkan index.html langsung di root repositori, bersama folder assets.
-- Setelah upload dan commit, tunggu GitHub Pages selesai menerbitkan perubahan.
-- Kesesuaian file untuk CNC/laser tetap perlu diperiksa menurut software, mesin, material, ukuran, dan kebutuhan produksi.
-- SEO teknis dan konten sudah disiapkan, tetapi peringkat Google tidak dapat dijamin dan tetap bergantung pada indeksasi, kualitas konten, reputasi situs, serta persaingan kata kunci.
+Catatan:
+- Website membaca file gambar PNG/JPG/JPEG/WEBP/GIF pada folder kategori.
+- Kode ditampilkan berdasarkan awalan dan nomor pada nama file.
+- File gambar produk harus diunggah ke folder kategorinya.
+- Hero memakai foto workspace yang sudah disiapkan, dengan ornamen Islami pada layar laptop.
+- Tombol WhatsApp memakai warna hijau; tautan menuju 6285692520888.
+- Zoom preview memakai pinch dan drag pada perangkat sentuh.
