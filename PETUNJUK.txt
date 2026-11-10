@@ -1,0 +1,16 @@
+PAKET PEMBARUAN WEBSITE VECTOR SIAP PAKAI
+
+Isi paket ini adalah pembaruan file website, bukan salinan folder produk Anda.
+
+1. Upload/ganti index.html, robots.txt, dan sitemap.xml pada root repositori.
+2. Upload folder artikel/ dan kategori/ ke root repositori (gabungkan, jangan hapus file lain).
+3. Upload assets/images/hero/hero-akf-original.jpeg ke lokasi yang sama.
+4. JANGAN menghapus assets/images beserta 12 folder kategori produk yang sudah Anda isi.
+5. JANGAN menghapus favicon.svg atau aset lain yang sudah ada.
+6. Setelah upload, periksa URL website, seluruh kategori, tombol WhatsApp, dan halaman artikel.
+
+Hero LOCK: assets/images/hero/hero-akf-original.jpeg. Foto asli dipakai langsung, tanpa pemrosesan wajah.
+Nomor WhatsApp: 6285692520888.
+Kode produk: dihasilkan dari kategori + nama file secara deterministik. Nama file asli tidak diubah. Jika nama file/lokasi kategori diganti, kode ikut berubah.
+
+Catatan teknis: katalog membaca folder publik GitHub melalui GitHub Contents API; daftar gambar memerlukan koneksi internet dan API publik GitHub.

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://USERNAME.github.io/REPOSITORY/sitemap.xml
+Sitemap: https://sug453193-ux.github.io/vector-siap-pakai/sitemap.xml
