@@ -233,6 +233,43 @@
     @media(max-width:620px){.catalog-tools{display:block}.catalog-count{margin-top:9px}.viewer-product-info{bottom:52px}.viewer-hint{max-width:95vw;white-space:normal;text-align:center}}
 
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  
+    /* Revisi proporsi responsif VECTOR SIAP PAKAI */
+    .container{width:min(var(--max),calc(100% - 48px))}
+    .hero-photo{aspect-ratio:4/3;height:auto;min-height:0;max-width:560px}
+    .hero-photo img{object-fit:contain;padding:0}
+    .about-panel{background-position:center;background-size:cover}
+    .cta-box.cta-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:center;gap:34px;background:linear-gradient(145deg,#14243a,#0b1422);padding:clamp(24px,4vw,55px)}
+    .cta-copy{min-width:0}
+    .cta-copy p{max-width:600px;color:var(--muted);margin:15px 0 25px}
+    .cta-image-frame{min-width:0;margin:0;padding:12px;border:1px solid rgba(215,180,106,.3);border-radius:18px;background:rgba(4,10,18,.58);overflow:hidden}
+    .cta-image-frame img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain;border-radius:10px;background:#fff}
+    .cta-image-frame figcaption{padding:10px 4px 0;color:#c4cedb;text-align:center;font-size:11px}
+    .cta-image-frame.image-pending{min-height:200px;display:grid;place-items:center}
+    .cta-image-frame.image-pending:after{content:"Screenshot CorelDRAW akan ditampilkan di sini";color:#c4cedb;text-align:center;font-size:12px;padding:25px}
+    .category-card,.product-card{min-width:0;overflow-wrap:anywhere}
+    .product-info h3{overflow-wrap:anywhere}
+    .formats a{min-height:42px;min-width:58px}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+    @media(max-width:900px){
+      .container{width:min(var(--max),calc(100% - 36px))}
+      .hero-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+      .hero-photo{max-width:100%;width:100%;aspect-ratio:4/3}
+      .cta-box.cta-layout{grid-template-columns:1fr;gap:24px}
+      .cta-image-frame img{max-height:none}
+    }
+    @media(max-width:620px){
+      .container{width:calc(100% - 28px)}
+      .hero-photo{aspect-ratio:4/3;border-radius:18px}
+      .category-grid,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .product-image{height:clamp(135px,42vw,190px)}
+      .product-actions{flex-direction:column}
+      .cta-box.cta-layout{padding:24px 18px}
+      .cta-image-frame{padding:8px}
+      .formats{gap:8px}
+      .formats a{flex:1 0 64px}
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -285,7 +322,7 @@
         </div>
         <div class="hero-photo-wrap">
           <div class="art-main hero-photo">
-            <img src="assets/images/hero/hero-akf-original.jpeg" alt="Foto asli untuk tampilan utama VECTOR SIAP PAKAI" loading="eager" onerror="this.hidden=true;this.parentElement.classList.add('photo-pending')">
+            <img src="assets/images/hero/hero-akf-original.jpeg" alt="Foto asli AKF untuk tampilan utama VECTOR SIAP PAKAI" loading="eager" fetchpriority="high" decoding="async" onerror="this.hidden=true;this.parentElement.classList.add('photo-pending')">
             <div class="photo-pending-label">Foto utama akan ditampilkan di sini</div>
             <div class="art-caption"><strong>VECTOR SIAP PAKAI</strong>Desain vector dan vektor untuk kebutuhan kreatif dan produksi.</div>
           </div>
@@ -378,11 +415,17 @@
 
     <section class="cta">
       <div class="container">
-        <div class="cta-box">
-          <div class="section-kicker">Butuh bantuan memilih?</div>
-          <h2>Temukan desain yang tepat untuk proyek Anda.</h2>
-          <p>Kirim kode produk atau kategori yang Anda cari melalui WhatsApp. Kami akan membantu memberikan informasi produk dan format file yang tersedia.</p>
-          <a class="btn btn-primary btn-whatsapp" href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20konsultasi%20produk%20vektor." target="_blank" rel="noopener"><span class="wa-inline"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 2.67A13.23 13.23 0 0 0 4.7 22.73L3.2 29.3l6.72-1.45a13.25 13.25 0 1 0 6.12-25.18Zm0 24.1a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99.86.9-3.88-.26-.4a10.82 10.82 0 1 1 9.25 5.16Zm5.94-8.1c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.66-1.96-1.85-2.29-.19-.33-.02-.51.14-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.02-2.45-.27-.64-.54-.55-.74-.56l-.63-.01c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.75s1.19 3.19 1.35 3.41c.17.22 2.34 3.57 5.67 5.01.79.34 1.4.55 1.88.7.79.25 1.51.22 2.08.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg></span> Hubungi WhatsApp</a>
+        <div class="cta-box cta-layout">
+          <div class="cta-copy">
+            <div class="section-kicker">Butuh bantuan memilih?</div>
+            <h2>Temukan desain yang tepat untuk proyek Anda.</h2>
+            <p>Kirim kode produk atau kategori yang Anda cari melalui WhatsApp. Kami akan membantu memberikan informasi produk dan format file yang tersedia.</p>
+            <a class="btn btn-primary btn-whatsapp" href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20konsultasi%20produk%20vektor." target="_blank" rel="noopener noreferrer">Hubungi WhatsApp</a>
+          </div>
+          <figure class="cta-image-frame">
+            <img src="assets/images/hero/coreldraw-workspace.png" alt="Screenshot asli layar CorelDRAW dengan koleksi desain VECTOR SIAP PAKAI" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('image-pending');this.hidden=true">
+            <figcaption>Contoh koleksi desain yang dikerjakan di CorelDRAW</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -520,12 +563,12 @@
       categories.forEach(category=>{
         const count=allProducts.filter(p=>p.category===category.id).length;
         const card=document.createElement("a");
-        card.className="category-card"; card.href=`kategori/${encodeURIComponent(category.id)}/`; card.dataset.category=category.id;
+        card.className="category-card"; card.href="#koleksi"; card.dataset.category=category.id;
         const icon=document.createElement("div"); icon.className="category-icon"; icon.textContent=category.icon;
         const title=document.createElement("strong"); title.textContent=category.name;
         const desc=document.createElement("span"); desc.textContent=category.desc;
         const total=document.createElement("small"); total.className="category-total"; total.textContent=`${count} produk`;
-        card.append(icon,title,desc,total);
+        card.append(icon,title,desc,total); card.addEventListener("click",event=>{event.preventDefault();setFilter(category.id);document.getElementById("koleksi").scrollIntoView({behavior:"smooth",block:"start"});});
         
         categoryGrid.append(card);
       });
