@@ -143,7 +143,7 @@
     .about-panel strong{font:800 23px Manrope,sans-serif}
     .about-panel span{color:var(--muted);font-size:13px;margin-top:6px}
     .formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
-    .formats span{padding:8px 12px;border:1px solid rgba(215,180,106,.22);border-radius:9px;color:var(--gold2);font-size:11px;font-weight:800}
+    .formats button{padding:8px 12px;border:1px solid rgba(215,180,106,.35);border-radius:9px;background:rgba(215,180,106,.07);color:var(--gold2);font-size:11px;font-weight:800;cursor:pointer;transition:.2s}.formats button:hover,.formats button:focus-visible{background:#25D366;border-color:#25D366;color:#fff;outline:none}
     .cta{padding-top:20px}
     .cta-box{padding:55px;border:1px solid rgba(215,180,106,.24);border-radius:27px;
       background:radial-gradient(circle at 90% 5%,rgba(215,180,106,.16),transparent 35%),linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
@@ -356,7 +356,7 @@
           <h2>Solusi praktis untuk kebutuhan desain dan produksi.</h2>
           <p>VECTOR SIAP PAKAI menghadirkan koleksi desain vector (vektor) digital untuk membantu proses kreatif dan produksi menjadi lebih praktis. Jelajahi berbagai kategori ornamen dan pola yang dapat disesuaikan dengan kebutuhan Anda.</p>
           <p>Setiap produk memiliki kode agar mudah ditanyakan. Sebelum memesan, silakan konfirmasi format file, detail produk, dan kecocokan dengan software atau mesin yang digunakan.</p>
-          <div class="formats"><span>CDR</span><span>SVG</span><span>EPS</span><span>DXF</span><span>AI</span><span>PDF</span></div>
+          <div class="formats" aria-label="Tanyakan ketersediaan format file"><button type="button" data-format="CDR">CDR</button><button type="button" data-format="SVG">SVG</button><button type="button" data-format="EPS">EPS</button><button type="button" data-format="DXF">DXF</button><button type="button" data-format="AI">AI</button><button type="button" data-format="PDF">PDF</button></div>
         </div>
         <div class="about-panel">
           <div class="symbol">✥</div>
@@ -534,6 +534,16 @@
       filters.querySelectorAll(".filter").forEach(button=>button.classList.toggle("active",button.dataset.filter===filter));
       renderProducts();
     }
+    // Tombol format mengirim pertanyaan ketersediaan format terpilih ke WhatsApp.
+    document.querySelectorAll(".formats [data-format]").forEach(button=>{
+      button.addEventListener("click",()=>{
+        const format=button.dataset.format;
+        const message=`Halo VECTOR SIAP PAKAI, saya ingin menanyakan ketersediaan file dalam format ${format}.
+
+Mohon informasikan produk apa saja yang tersedia dalam format tersebut, beserta kode produk dan harganya. Saya memahami bahwa ketersediaan format dapat berbeda untuk setiap produk. Terima kasih.`;
+        window.open(`https://wa.me/${WA}?text=${encodeURIComponent(message)}`,"_blank","noopener,noreferrer");
+      });
+    });
     // Normalisasi semua tombol WhatsApp statis agar selalu membuka chat bisnis langsung.
     document.querySelectorAll('a.btn-whatsapp, a.wa-float, a.footer-contact, a.nav-cta').forEach(link=>{
       if(!link.href || link.getAttribute('href')==='#') link.href='https://wa.me/6285692520888';
