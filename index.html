@@ -63,7 +63,7 @@
       repeating-linear-gradient(90deg,transparent 0 59px,rgba(255,255,255,.025) 60px)}
     .hero:after{content:"";position:absolute;width:520px;height:520px;right:-180px;top:12%;border-radius:50%;
       background:rgba(215,180,106,.12);filter:blur(90px);pointer-events:none}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;align-items:center;gap:48px}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:48px}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(215,180,106,.3);
       border-radius:999px;background:rgba(215,180,106,.08);color:var(--gold2);font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
     .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px var(--gold)}
@@ -90,6 +90,10 @@
     .hero-photo{width:100%;max-width:620px;height:auto;aspect-ratio:3/2;border-radius:24px;background:#0b1728}
     .hero-photo img{position:static;width:100%;height:100%;padding:0;object-fit:contain}
     .hero-photo .art-caption{left:14px;right:14px;bottom:14px}
+    .hero-photo.photo-pending{background:linear-gradient(145deg,#172b43,#0a1422);display:grid;place-items:center}
+    .photo-pending-label{display:none;color:#c5d0df;font-size:13px;text-align:center;padding:25px}
+    .hero-photo.photo-pending .photo-pending-label{display:block}
+    .hero-photo.photo-pending .art-caption{z-index:2}
     .btn-whatsapp,.nav-cta,.wa-float,.footer-contact{background:#25D366!important;color:#fff!important;border-color:#25D366!important}
     .btn-whatsapp:hover,.nav-cta:hover,.wa-float:hover,.footer-contact:hover{background:#1fb85a!important}
     .btn-secondary:has(.wa-inline){background:#25D366;border-color:#25D366;color:#fff}
@@ -137,16 +141,16 @@
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
     .about-copy p{margin-top:17px;color:var(--muted);font-size:15px;line-height:1.85}
     .about-panel{min-height:330px;border:1px solid rgba(215,180,106,.22);border-radius:25px;padding:28px;
-      background:radial-gradient(circle at 80% 20%,rgba(215,180,106,.15),transparent 35%),linear-gradient(145deg,#14243a,#0b1422);
+      background:linear-gradient(0deg,rgba(5,12,22,.88),rgba(5,12,22,.2)),url("assets/images/hero/hero-akf-original.jpeg") center/cover no-repeat,linear-gradient(145deg,#14243a,#0b1422);
       display:flex;flex-direction:column;justify-content:end}
     .about-panel .symbol{font-size:82px;color:var(--gold);line-height:1;margin-bottom:18px}
     .about-panel strong{font:800 23px Manrope,sans-serif}
     .about-panel span{color:var(--muted);font-size:13px;margin-top:6px}
     .formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
-    .formats button{padding:8px 12px;border:1px solid rgba(215,180,106,.35);border-radius:9px;background:rgba(215,180,106,.07);color:var(--gold2);font-size:11px;font-weight:800;cursor:pointer;transition:.2s}.formats button:hover,.formats button:focus-visible{background:#25D366;border-color:#25D366;color:#fff;outline:none}
+    .formats a{display:inline-flex;align-items:center;justify-content:center;min-width:54px;padding:9px 13px;border:1px solid rgba(215,180,106,.35);border-radius:9px;background:rgba(215,180,106,.07);color:var(--gold2);font-size:11px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}.formats a:hover,.formats a:focus-visible{background:#25D366;border-color:#25D366;color:#fff;outline:2px solid #25D366;outline-offset:2px}
     .cta{padding-top:20px}
     .cta-box{padding:55px;border:1px solid rgba(215,180,106,.24);border-radius:27px;
-      background:radial-gradient(circle at 90% 5%,rgba(215,180,106,.16),transparent 35%),linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
+      background:linear-gradient(90deg,rgba(5,12,22,.94),rgba(5,12,22,.7)),url("assets/images/hero/hero-akf-original.jpeg") center/cover no-repeat,linear-gradient(135deg,#14243a,#0b1422)}
     .cta-box p{max-width:660px;color:var(--muted);margin:15px 0 25px}
     footer{padding:35px 0 25px;border-top:1px solid var(--line);margin-top:45px}
     .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
@@ -279,7 +283,13 @@
           <p class="hero-note">File dan format mengikuti ketersediaan pada setiap produk. Hubungi kami untuk memastikan kebutuhan produksi Anda.</p>
           <p class="hero-note">Vector dan vektor adalah dua penulisan yang sering digunakan untuk menyebut jenis grafis yang sama. Di sini Anda dapat menemukan koleksi desain vector / vektor siap pakai.</p>
         </div>
-
+        <div class="hero-photo-wrap">
+          <div class="art-main hero-photo">
+            <img src="assets/images/hero/hero-akf-original.jpeg" alt="Foto asli untuk tampilan utama VECTOR SIAP PAKAI" loading="eager" onerror="this.hidden=true;this.parentElement.classList.add('photo-pending')">
+            <div class="photo-pending-label">Foto utama akan ditampilkan di sini</div>
+            <div class="art-caption"><strong>VECTOR SIAP PAKAI</strong>Desain vector dan vektor untuk kebutuhan kreatif dan produksi.</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -356,7 +366,7 @@
           <h2>Solusi praktis untuk kebutuhan desain dan produksi.</h2>
           <p>VECTOR SIAP PAKAI menghadirkan koleksi desain vector (vektor) digital untuk membantu proses kreatif dan produksi menjadi lebih praktis. Jelajahi berbagai kategori ornamen dan pola yang dapat disesuaikan dengan kebutuhan Anda.</p>
           <p>Setiap produk memiliki kode agar mudah ditanyakan. Sebelum memesan, silakan konfirmasi format file, detail produk, dan kecocokan dengan software atau mesin yang digunakan.</p>
-          <div class="formats" aria-label="Tanyakan ketersediaan format file"><button type="button" data-format="CDR">CDR</button><button type="button" data-format="SVG">SVG</button><button type="button" data-format="EPS">EPS</button><button type="button" data-format="DXF">DXF</button><button type="button" data-format="AI">AI</button><button type="button" data-format="PDF">PDF</button></div>
+          <div class="formats" aria-label="Tanyakan ketersediaan format file"><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20CDR.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format CDR melalui WhatsApp">CDR</a><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20SVG.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format SVG melalui WhatsApp">SVG</a><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20EPS.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format EPS melalui WhatsApp">EPS</a><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20DXF.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format DXF melalui WhatsApp">DXF</a><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20AI.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format AI melalui WhatsApp">AI</a><a href="https://wa.me/6285692520888?text=Halo%20VECTOR%20SIAP%20PAKAI%2C%20saya%20ingin%20menanyakan%20ketersediaan%20file%20dalam%20format%20PDF.%20Mohon%20informasikan%20produk%20yang%20tersedia%2C%20kode%20produk%2C%20dan%20harganya.%20Terima%20kasih." target="_blank" rel="noopener noreferrer" aria-label="Tanyakan format PDF melalui WhatsApp">PDF</a></div>
         </div>
         <div class="about-panel">
           <div class="symbol">✥</div>
@@ -534,16 +544,6 @@
       filters.querySelectorAll(".filter").forEach(button=>button.classList.toggle("active",button.dataset.filter===filter));
       renderProducts();
     }
-    // Tombol format mengirim pertanyaan ketersediaan format terpilih ke WhatsApp.
-    document.querySelectorAll(".formats [data-format]").forEach(button=>{
-      button.addEventListener("click",()=>{
-        const format=button.dataset.format;
-        const message=`Halo VECTOR SIAP PAKAI, saya ingin menanyakan ketersediaan file dalam format ${format}.
-
-Mohon informasikan produk apa saja yang tersedia dalam format tersebut, beserta kode produk dan harganya. Saya memahami bahwa ketersediaan format dapat berbeda untuk setiap produk. Terima kasih.`;
-        window.open(`https://wa.me/${WA}?text=${encodeURIComponent(message)}`,"_blank","noopener,noreferrer");
-      });
-    });
     // Normalisasi semua tombol WhatsApp statis agar selalu membuka chat bisnis langsung.
     document.querySelectorAll('a.btn-whatsapp, a.wa-float, a.footer-contact, a.nav-cta').forEach(link=>{
       if(!link.href || link.getAttribute('href')==='#') link.href='https://wa.me/6285692520888';
