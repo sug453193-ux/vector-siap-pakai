@@ -141,7 +141,7 @@
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
     .about-copy p{margin-top:17px;color:var(--muted);font-size:15px;line-height:1.85}
     .about-panel{min-height:330px;border:1px solid rgba(215,180,106,.22);border-radius:25px;padding:28px;
-      background:linear-gradient(0deg,rgba(5,12,22,.88),rgba(5,12,22,.2)),url("assets/images/hero/hero-akf-original.jpeg") center/cover no-repeat,linear-gradient(145deg,#14243a,#0b1422);
+      background:linear-gradient(0deg,rgba(5,12,22,.72),rgba(5,12,22,.12)),url("assets/images/hero/hero-akf-original.jpeg") center/contain no-repeat,linear-gradient(145deg,#14243a,#0b1422);
       display:flex;flex-direction:column;justify-content:end}
     .about-panel .symbol{font-size:82px;color:var(--gold);line-height:1;margin-bottom:18px}
     .about-panel strong{font:800 23px Manrope,sans-serif}
@@ -238,7 +238,7 @@
     .container{width:min(var(--max),calc(100% - 48px))}
     .hero-photo{aspect-ratio:4/3;height:auto;min-height:0;max-width:560px}
     .hero-photo img{object-fit:contain;padding:0}
-    .about-panel{background-position:center;background-size:cover}
+    .about-panel{background-position:center,center,center;background-size:auto,contain,auto;background-repeat:no-repeat}
     .cta-box.cta-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:center;gap:34px;background:linear-gradient(145deg,#14243a,#0b1422);padding:clamp(24px,4vw,55px)}
     .cta-copy{min-width:0}
     .cta-copy p{max-width:600px;color:var(--muted);margin:15px 0 25px}
@@ -611,7 +611,7 @@
       items.forEach((p,index)=>{
         const card=document.createElement("article");card.className="product-card";
         const imageButton=document.createElement("button");imageButton.type="button";imageButton.className="product-image";imageButton.setAttribute("aria-label",`Lihat ${p.label}, kode ${p.code}`);
-        const img=document.createElement("img");img.src=p.url;img.alt=`${p.label} — ${p.categoryName}, kode ${p.code}`;img.loading=index<6?"eager":"lazy";img.decoding="async";img.onerror=()=>{imageButton.classList.add("image-error");img.alt="Gambar belum dapat dimuat";};imageButton.append(img);
+        const img=document.createElement("img");img.src=p.url;img.alt=`${p.label} — ${p.categoryName}, kode ${p.code}`;img.loading="lazy";img.decoding="async";img.fetchPriority="low";img.onerror=()=>{imageButton.classList.add("image-error");img.alt="Gambar belum dapat dimuat";};imageButton.append(img);
         imageButton.addEventListener("click",()=>openViewer(p));
         const info=document.createElement("div");info.className="product-info";
         const meta=document.createElement("div");meta.className="product-meta";
