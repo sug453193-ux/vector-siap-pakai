@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sug453193-ux.github.io/vector-siap-pakai/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://sug453193-ux.github.io/vector-siap-pakai/</loc>
+    <image:image>
+      <image:loc>https://sug453193-ux.github.io/vector-siap-pakai/assets/coreldraw-workspace.png</image:loc>
+      <image:title>Kolase hitam putih desain vector dan ornamen siap pakai</image:title>
+      <image:caption>Koleksi Vector Siap Pakai — desain vector dan vektor untuk kebutuhan kreatif dan produksi</image:caption>
+    </image:image>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   <url><loc>https://sug453193-ux.github.io/vector-siap-pakai/kategori/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sug453193-ux.github.io/vector-siap-pakai/artikel/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://sug453193-ux.github.io/vector-siap-pakai/artikel/bitmap-vector.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
