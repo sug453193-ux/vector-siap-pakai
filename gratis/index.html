@@ -32,7 +32,7 @@ const OWNER="sug453193-ux",REPO="vector-siap-pakai",BRANCH="main";
 const ROOT="gratis",API="https://api.github.com/repos/"+OWNER+"/"+REPO+"/contents";
 const grid=document.getElementById("grid"),count=document.getElementById("count");
 document.getElementById("year").textContent=new Date().getFullYear();
-function label(s){return s.replace(/\\.[^.]+$/,"").replace(/[-_]+/g," ").replace(/\\b\\w/g,c=>c.toUpperCase());}
+function label(s){return s.replace(/\.[^.]+$/,"").replace(/[-_]+/g," ").replace(/\b\w/g,c=>c.toUpperCase());}
 function ext(s){return (s.split(".").pop()||"FILE").toUpperCase();}
 async function get(path){const r=await fetch(API+"/"+path+"?ref="+BRANCH,{headers:{Accept:"application/vnd.github+json"}});if(!r.ok)throw Error("GitHub API "+r.status);return r.json();}
 function makeCard(f,category){
