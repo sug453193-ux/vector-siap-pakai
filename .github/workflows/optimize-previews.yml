@@ -39,12 +39,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
+          git add 'assets/**/*.webp' 'assets/*.webp' assets/catalog.json
           if git diff --cached --quiet; then
-            echo "All WebP previews already exist."
+            echo "All WebP previews and catalog manifest are up to date."
             exit 0
           fi
-          git commit -m "Generate lightweight WebP image previews"
+          git commit -m "Generate lightweight WebP image previews and catalog manifest"
           git fetch origin main
-          git rebase origin/main
+          git rebase -X theirs origin/main
           git push origin HEAD:main
