@@ -11,8 +11,9 @@ def make_preview(source: Path) -> None:
         return
     with Image.open(source) as original:
         image = ImageOps.exif_transpose(original)
-        image.thumbnail((MAX_EDGE, MAX_EDGE), Image.Resampling.LANCZOS)
         has_alpha = "A" in image.getbands() or "transparency" in image.info
+        image = image.convert("RGBA" if has_alpha else "RGB")
+        image.thumbnail((MAX_EDGE, MAX_EDGE), Image.Resampling.LANCZOS)
         options = {
             "format": "WEBP",
             "method": 6,
