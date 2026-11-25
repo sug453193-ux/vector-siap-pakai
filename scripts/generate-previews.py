@@ -45,7 +45,7 @@ def make_previews(source: Path) -> None:
             print(f"{source} -> {target} ({source.stat().st_size} -> {target.stat().st_size} bytes)")
 
 def web_path(path: Path) -> str:
-    return quote(path.as_posix(), safe="/")
+    return "assets/" + quote(path.as_posix(), safe="/")
 
 def title_slug(slug: str) -> str:
     return " ".join(w.upper() if len(w) <= 3 else w.capitalize() for w in slug.split("-"))
@@ -81,5 +81,5 @@ if IMAGE_ROOT.exists():
 
 catalog = {"version": 1, "categories": categories, "products": products}
 target = ROOT / "catalog.json"
-target.write_text(json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
+target.write_text(json.dumps(catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
 print(f"Generated {target}: {len(categories)} categories, {len(products)} products")
